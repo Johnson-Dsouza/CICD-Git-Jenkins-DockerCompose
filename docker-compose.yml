@@ -1,0 +1,40 @@
+version: '3.3'
+services:
+    php-apache-environment:
+        container_name: php-apache
+        build:
+            context: .
+            dockerfile: Dockerfile
+        depends_on:
+            - db
+        volumes:
+            - ./EmployeesDetails:/var/www/html/
+        ports:
+            - 8000:80
+    db:
+        container_name: db
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: test
+            MYSQL_DATABASE: emp_demo_database
+            MYSQL_USER: user
+            MYSQL_PASSWORD: test
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d           
+            
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links:
+           - db:db
+        ports:
+             - '8080:80'
+        restart: always
+        environment:
+            MYSQL_USER: user
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test
+        depends_on:
+            - db
