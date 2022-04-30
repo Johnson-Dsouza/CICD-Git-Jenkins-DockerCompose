@@ -53,3 +53,40 @@ ssh-keygen
 ![SCM](https://user-images.githubusercontent.com/60909862/166112525-7a693586-7fcf-4ff3-be81-96026d365b16.png)
 
 
+   In Build Triggers
+
+   Click on "GitHub hook trigger for GITScm pollin" for Event-based Triggers like SCM Actions, WebHooks etc
+
+![Build Triggers](https://user-images.githubusercontent.com/60909862/166112972-0e365fa5-2da9-4bd2-b699-5d1abcc2152e.png)
+
+
+   In Build
+
+   Select "Execute Shell" -> Enter the below commands
+```
+#Docker Installation
+sudo apt install docker.io -y
+
+#Docker-Compose Installation
+sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+#To check version of Docker & Docker-Compose 
+sudo docker --version
+sudo docker-compose --version
+
+#To Delete all container existed 
+#sudo docker rm -f $(sudo docker ps -a -q)
+
+
+#Docker Compose has an -f flag where you can pass in the location of the docker-compose.yml file
+sudo docker-compose -f /home/ubuntu/jenkins/workspace/CICD-Pipeline/docker-compose.yml up -d
+
+#This command will ensure all currently running containers will be restarted unless stopped.
+#sudo docker update --restart unless-stopped $(sudo docker ps -q)
+
+```
+
+10. When you have entered all the data -> Click Apply -> Save the project.
+
+11. Now, in the main screen, Click the "Build Now" button on the left-hand side to build the source code.
