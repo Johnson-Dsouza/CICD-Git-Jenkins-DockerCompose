@@ -36,13 +36,18 @@ ssh-keygen
 8. Enter the name of the item you want to create -> Select "Freestyle project" -> Click Okay.
 
 9. Enter Project Details
+   
    In General 
-	   Click on "GitHub project" and Enter the github repository URL 
-	   Click on "Restrict where this project can be run" and Enter "Agent Name" 
+
+	Click on "GitHub project" and Enter the github repository URL 
+	
+	Click on "Restrict where this project can be run" and Enter "Agent Name" 
       
 ![General](https://user-images.githubusercontent.com/60909862/166112589-fa43b780-c5d0-4225-94cc-106afc91243e.png)
 
    In Source Code Management
-	   Click on Git -> Enter the Github repository URL in "Repository URL" -> Select Branch 
+
+
+	Click on Git -> Enter the Github repository URL in "Repository URL" -> Select Branch 
       
 ![SCM](https://user-images.githubusercontent.com/60909862/166112525-7a693586-7fcf-4ff3-be81-96026d365b16.png)
