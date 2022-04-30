@@ -47,7 +47,6 @@ ssh-keygen
 
    In Source Code Management
 
-
-	Click on Git -> Enter the Github repository URL in "Repository URL" -> Select Branch 
+   Click on Git -> Enter the Github repository URL in "Repository URL" -> Select Branch 
       
 ![SCM](https://user-images.githubusercontent.com/60909862/166112525-7a693586-7fcf-4ff3-be81-96026d365b16.png)
