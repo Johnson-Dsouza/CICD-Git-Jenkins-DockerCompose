@@ -22,9 +22,9 @@ ssh-keygen
 
 6. Add the Jenkins agent node via the Jenkins UI.
    
-   Click on "Manage Jenkins" -> "Manage nodes and clouds" -> "New node"
-   Enter a Node name -> Click on "Create"
+   Click on "Manage Jenkins" -> "Manage nodes and clouds" -> "New node".
+   Enter a Node name -> Click on "Create".
    Enter a Remote Work Directory: "/home/ubuntu/jenkins" -> Select Launch method as "Launch agents via SSH" -> Enter Host as "Docker Host Private IP4 address" 
-      -> Select Credentials -> Select Host Key Verfification Strategy as "Non verifying Verification Strategy" -> Click on "Save"
+      -> Select Credentials -> Select Host Key Verfification Strategy as "Non verifying Verification Strategy" -> Click on "Save".
       
 ![Agent1](https://user-images.githubusercontent.com/60909862/166110802-81753741-e554-45da-999f-e7c2ee933d5b.png)
