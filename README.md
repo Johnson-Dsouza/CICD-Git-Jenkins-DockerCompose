@@ -2,11 +2,24 @@
 
 ![CICD](https://user-images.githubusercontent.com/60909862/166105137-66a46c43-46c4-46e8-a034-62f836d0f70d.jpg)
 
-**Heading1**
 
-1. Launch an EC2 instance for Docker host
+1. Login to Jenkins UI using your jenkins IP address: http://your_ip_address:8080
 
+2. Launch an EC2 instance for Docker host
 
+3. Install the necessary package such as Java
 ```
-sudo install java
+sudo apt update
+sudo apt install openjdk-11-jdk
 ```
+
+4. Generate an ssh key on Jenkins user
+```
+ssh-keygen
+```
+
+5. Add the public key to the authorized_keys file of the jenkins user on the agent node (Docker host).
+
+6. Add the Jenkins agent node via the Jenkins UI.
+    Click on "Manage Jenkins" -> "Manage nodes and clouds" -> "New node"
+ ![1](https://user-images.githubusercontent.com/60909862/166107383-768aa52e-bfef-4168-8376-1e251d5d6012.png)
