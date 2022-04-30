@@ -22,4 +22,5 @@ ssh-keygen
 
 6. Add the Jenkins agent node via the Jenkins UI.
     Click on "Manage Jenkins" -> "Manage nodes and clouds" -> "New node"
+    
  ![1](https://user-images.githubusercontent.com/60909862/166107383-768aa52e-bfef-4168-8376-1e251d5d6012.png)
